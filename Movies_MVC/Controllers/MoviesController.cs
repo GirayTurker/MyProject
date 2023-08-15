@@ -26,7 +26,8 @@ namespace Movies_MVC.Controllers
 
         public ActionResult Index(int? pageIndex, string sortBy)
         {
-            //Fixed this section. HasValue function is printing only value 1 for pageIndex
+            /*Fixed this section. HasValue function is printing only value 1 for pageIndex
+            instead passing the override value for it*/
             const int a = 1;
             if (pageIndex.Equals(null))
             {
