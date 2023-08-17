@@ -1,8 +1,30 @@
-﻿@model Movies_MVC.Models.Movie
+﻿@model Movies_MVC.ViewModels.RandomMovieViewModel
 
 @{
-    ViewBag.Title = "Random";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+ViewBag.Title = "Random";
+Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.Name</h2>
+@*If movie watched more than 5 customer*@
+@{
+    var className = Model.Customers.Count > 5 ? "Most Watched" : null;
+}
+
+@*If movie watched more than 5 customer print the movie name*@
+<h2 class="@className">@Model.Movie.Name</h2>
+
+@*If movie is not watched by any customer print the statement*@
+@if (Model.Customers.Count == 0)
+{
+    <p>No one has rented this movie before</p>
+}
+else
+{
+    <ul>
+        @*Print list of Customer Name*@
+        @foreach (var customer in Model.Customers)
+        {
+            <li>@customer.Name</li>
+        }
+    </ul>
+}
