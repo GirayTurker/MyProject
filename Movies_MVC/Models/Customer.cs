@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace Movies_MVC.Models
 {
     public class Customer
