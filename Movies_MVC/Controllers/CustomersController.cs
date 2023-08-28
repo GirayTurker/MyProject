@@ -8,12 +8,14 @@ namespace Movies_MVC.Controllers
 {
     public class CustomersController:Controller
     {
+        //Customer page View
         public ViewResult Index()
         {
             var customers = GetCustomers();
             return View(customers);
         }
-
+        
+        //Customer page List of Customers
         private static IEnumerable<Customer> GetCustomers()
         {
             return new List<Customer>
@@ -22,7 +24,8 @@ namespace Movies_MVC.Controllers
                 new Customer{Id = 2, Name = "Mary Williams"}
             };
         }
-
+        
+        //Customer/Details/# page 
         public ActionResult Details(int id)
         {
             var customer = GetCustomers().SingleOrDefault(c => c.Id == id);

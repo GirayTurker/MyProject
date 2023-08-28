@@ -9,7 +9,7 @@ namespace Movies_MVC.Controllers
 {
     public class MoviesController: Controller
     {
-        
+            //Movies page Index
             public ViewResult Index()
             {
                 var movies = GetMovies();
@@ -17,7 +17,7 @@ namespace Movies_MVC.Controllers
                 return View(movies);
             }
        
-
+        //Movies page movies lists
         private IEnumerable<Movie> GetMovies()
         {
             return new List<Movie>

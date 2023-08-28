@@ -1,4 +1,5 @@
-﻿@model System.Collections.Generic.IEnumerable<Movies_MVC.Models.Customer>
+﻿@*Declaration of Customer page model (IEnumerable)*@
+@model System.Collections.Generic.IEnumerable<Movies_MVC.Models.Customer>
 
 @{
     ViewBag.Title = "Customers";
@@ -21,6 +22,7 @@ else
         </tr>
         </thead>
         <tbody>
+        @*Table for Customers/Details/#*@
         @foreach (var customer in Model)
         {
             <tr>
