@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace Movies_MVC
+namespace GetBinNotProject
 {
     public class FilterConfig
     {

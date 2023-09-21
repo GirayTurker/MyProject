@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-namespace Movies_MVC.Models
+﻿namespace Movies_MVC.Models
 {
     public class Customer
     {
         public int Id { get; set; }
-        public String Name { get; set; }
+        public string Name { get; set; }
     }
-
-    
 }
